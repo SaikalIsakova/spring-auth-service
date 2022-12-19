@@ -6,9 +6,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
 @Mapper
-public interface AccountMapper {
+public interface AccountMapper extends BaseMapper<Account,AccountDto> {
     AccountMapper INSTANCE= Mappers.getMapper(AccountMapper.class);
 
-    Account toEntity(AccountDto accountDto);
-    AccountDto toDto(Account account);
 }
